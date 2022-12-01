@@ -1,0 +1,21 @@
+[
+	{
+		"title": "P1",
+		"price": 1,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/25/Argentina_1985_%28nombre_de_la_pel%C3%ADcula%29.jpg",
+		"id": 1
+		
+	},
+	{
+		"title": "P2",
+		"price": 2,
+		"thumbnail": "https://es.wikipedia.org/wiki/Cartel_de_cine#/media/Archivo:Poster_quito_2023.jpg",
+		"id": 2
+	},
+	{
+		"title": "P3",
+		"price": 3,
+		"thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Kabzaa_Movie_Poster.jpg",
+		"id": 3
+	}
+]
