@@ -2,6 +2,7 @@ import fs from "fs"
 
 //import { randomUUID } from "crypto"
 
+
 export default class Contenedor {
   constructor(ruta) {
     this.filepath = ruta
@@ -32,7 +33,7 @@ export default class Contenedor {
         thumbnail,
         id: products.length + 1,
       };
-      peliculas.push(newProduct);
+      products.push(newProduct);
       await fs.promises.writeFile(this.filepath, JSON.stringify(products, null, 2));
       return `Se ha agregado pelicula ${title}`;
     } catch (err) {
@@ -145,6 +146,9 @@ export default class Contenedor {
 
   }
 }
+
+export const products = new Contenedor( './data/cart.json')
+console.log(products)
 
 // const main = async () => {
 //   const manejadorDeArchivos = new Contenedor();

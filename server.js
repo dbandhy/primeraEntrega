@@ -6,40 +6,41 @@ import routerCarts from './routers/routerCart.js'
 const app = express();
 
 const port = process.env.port || 8080;
-let admin = false;
+//let admin = false;
 
 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use('/api/shoppingCart', routerCarts)
 app.use('/api/products', routerProducts);
-app.use('/api/shoppingcart', routerCarts); // ENCONTRAR FORMA DE LEER
+ // ENCONTRAR FORMA DE LEER
 
-function soloParaAdmins(req, res, next) {
-    if (admin) {
-    next()
-    } else
-    res.statud(403)
-}
+// function soloParaAdmins(req, res, next) {
+//     if (admin) {
+//     next()
+//     } else
+//     res.statud(403)
+// }
 
-app.post('/login', (req, res) => {
-    admin = true
-    res.sendStatus(200)
-})
+// app.post('/login', (req, res) => {
+//     admin = true
+//     res.sendStatus(200)
+// })
 
-app.post('/logout', (req, res) => {
-    admin = false
-    res.sendStatus(200)
-})
+// app.post('/logout', (req, res) => {
+//     admin = false
+//     res.sendStatus(200)
+// })
 
-app.get('/publico', (req, res) => {
-    res.send('soy un endpoint público')
-})
+// app.get('/publico', (req, res) => {
+//     res.send('soy un endpoint público')
+// })
 
-app.get('/privado', soloParaAdmins, (req, res) => {
-    res.send('soy un endpoint privado')
-})
+// app.get('/privado', soloParaAdmins, (req, res) => {
+//     res.send('soy un endpoint privado')
+// })
 
 
 app.listen(port, () => {

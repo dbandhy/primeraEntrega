@@ -70,4 +70,5 @@ export const deleteProduct = async (req, res) => {
 
 }
 
+const products = new Contenedor('/data/products.json')
 // export { addCart, deleteCart, deleteProduct, getProducts, addProduct }
