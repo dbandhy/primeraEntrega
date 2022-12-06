@@ -2,10 +2,10 @@ import express from 'express'
 import * as controllerProducts from '../controllers/controllerProducts.js'
 
 const routerProducts = express.Router();
-routerProducts.get('/:id?', (req, res) => controllerProducts.getProducts(req, res));
-routerProducts.post('/', (req, res) => controllerProducts.addProduct(req, res));
-routerProducts.put('/:id', (req, res) => controllerProducts.updateProduct(req, res));
-routerProducts.delete('/:id', (req, res) => controllerProducts.deleteProduct(req, res));
+routerProducts.get('/:id?', (req, res) => controllerProducts.getProducts(req, res)); //funciona
+routerProducts.post('/', (req, res) => controllerProducts.addProduct(req, res)); //funciona
+routerProducts.put('/:id', (req, res) => controllerProducts.updateProduct(req, res)); //funciona
+routerProducts.delete('/:id', (req, res) => controllerProducts.deleteProduct(req, res)); //funciona
 
 export default routerProducts
 

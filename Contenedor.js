@@ -33,6 +33,7 @@ export default class Contenedor {
         thumbnail,
         id: products.length + 1,
       };
+      //Aquí está el error
       products.push(newProduct);
       await fs.promises.writeFile(this.filepath, JSON.stringify(products, null, 2));
       return `Se ha agregado pelicula ${title}`;
@@ -133,7 +134,9 @@ export default class Contenedor {
       const cartSelected = this.getById(idCartSelected);
       if (cartSelected == null)
         return;
-      const productToDelete = cartSelected.products.findIndex(product => product.id === idProduct);
+     //AQUÍ ESTÁ EL ERROR
+     
+        const productToDelete = cartSelected.products.findIndex(product => product.id === idProduct);
       if (productToDelete == -1)
         return;
       cartSelected.products.splice(productToDelete, 1);
